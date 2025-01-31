@@ -1,4 +1,10 @@
-import codecs
+
+idefine('encoding', default='utf-8',
+       help='''The default character encoding of ssh servers.
+Example: --encoding='utf-8' to solve the problem with some switches&routers''')
+define('version', type=bool, help='Show version information',
+       callback=print_version)
+mport codecs
 from setuptools import setup
 from webssh._version import __version__ as version
 
